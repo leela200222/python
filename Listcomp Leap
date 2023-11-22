@@ -1,0 +1,9 @@
+def leap(year):
+    count=0
+    if year%400==0 or year%4==0 and year%100!=0:
+        return count+1
+    else:
+        return False
+s,e=map(int,input().split())
+l=[i for i in range(s,e+1)if leap(i)]
+print(len(l))
