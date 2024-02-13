@@ -1,0 +1,44 @@
+class Solution:
+    def getdata(self,empno,empname,designation,basic,hra,da,ta):
+        self.empno=empno
+        self.empname=empname
+        self.designation=designation
+        self.basic=basic
+        self.hra=hra
+        self.da=da
+        self.ta=ta
+    def putdata(self):
+        print("Employee number:",self.empno)
+        print("Employee name:",self.empname)
+        print("Designation :",self.designation)
+        print("Basic pay :",self.basic)
+        print("HRA:",self.hra)
+        print("DA:",self.da)
+        print("TA:",self.ta)
+        netsal=self.basic+self.hra+self.da+self.ta
+        if netsal>50000:
+            sal=netsal*5/100
+            print("Salary is",netsal-sal)
+        elif netsal>3500:
+            sal=netsal*3/100
+            print("Salary is",netsal-sal)
+        elif netsal>20000:
+            sal=netsal*1/100
+            print("Salary is",netsal-sal)
+        else:
+            print("salary is",netsal)
+
+emp=Solution()            
+empno=int(input("Enter employee number:"))
+empname=input("Enter employee name:")
+designation=input("Enter designation:")
+basic=int(input("Enter Basic Pay:"))
+hra=int(input("Enter HRA :"))
+da=int(input("Enter DA:"))
+ta=int(input("Enter TA:"))
+emp.getdata(empno,empname,designation,basic,hra,da,ta)
+emp.putdata()
+        
+            
+        
+        
